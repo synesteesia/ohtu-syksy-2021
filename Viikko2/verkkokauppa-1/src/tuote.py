@@ -4,6 +4,8 @@ class Tuote:
         self.nimi = nimi
         self.hinta = hinta
 
+
+
     def __hash__(self):
         return hash(self.id)
 

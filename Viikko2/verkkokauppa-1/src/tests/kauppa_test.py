@@ -118,3 +118,50 @@ class TestKauppa(unittest.TestCase):
 
         # varmistetaan, että metodia tilisiirto on kutsuttu oikeilla argumenteilla
         pankki_mock.tilisiirto.assert_called_with("pekka", ANY, "12345", ANY, 3)
+
+    def test_aloita_asiointi_nollaa_hinnan(self):
+        pankki_mock = Mock()
+        viitegeneraattori_mock = Mock()
+
+        # palautetaan aina arvo 42
+        viitegeneraattori_mock.uusi.return_value = 42
+
+        varasto_mock = Mock(wraps=Varasto())
+
+        # alustetaan kauppa
+        kauppa = Kauppa(varasto_mock, pankki_mock, viitegeneraattori_mock)
+
+        # tehdään ostokset
+        kauppa.aloita_asiointi()
+        kauppa.lisaa_koriin(1)
+        kauppa.lisaa_koriin(3)
+        kauppa.aloita_asiointi()
+        kauppa.lisaa_koriin(2)
+        kauppa.tilimaksu("pekka", "12345")
+
+        # varmistetaan, että metodia tilisiirto on kutsuttu oikeilla argumenteilla
+        pankki_mock.tilisiirto.assert_called_with("pekka", ANY, "12345", ANY, 1)
+
+    def test_uusi_viite_per_maksutapahtuma(self):
+        pankki_mock = Mock()
+        viitegeneraattori_mock = Mock(wraps=Viitegeneraattori())
+
+
+        varasto_mock = Mock(wraps=Varasto())
+
+        # alustetaan kauppa
+        kauppa = Kauppa(varasto_mock, pankki_mock, viitegeneraattori_mock)
+
+        # tehdään ostokset
+        kauppa.aloita_asiointi()
+        kauppa.lisaa_koriin(1)
+        kauppa.tilimaksu("pekka", "12345")
+        self.assertEqual(viitegeneraattori_mock.uusi.call_count, 1)
+        kauppa.aloita_asiointi()
+        kauppa.lisaa_koriin(2)
+        kauppa.tilimaksu("pekka", "12345")
+        self.assertEqual(viitegeneraattori_mock.uusi.call_count, 2)
+
+
+        # varmistetaan, että metodia tilisiirto on kutsuttu oikeilla argumenteilla
+        
