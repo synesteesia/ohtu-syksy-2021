@@ -22,7 +22,7 @@ class Ostoskori:
     def lisaa_tuote(self, lisattava: Tuote):
         self._ostokset.append(Ostos(lisattava))
         self.tavaroiden_maara += 1
-        self.arvo =+ lisattava.hinta()
+        self.arvo += lisattava.hinta()
         # lisää tuotteen
         pass
 
