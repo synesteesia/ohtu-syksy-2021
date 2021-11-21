@@ -164,4 +164,26 @@ class TestKauppa(unittest.TestCase):
 
 
         # varmistetaan, että metodia tilisiirto on kutsuttu oikeilla argumenteilla
-        
+    def test_poista_toimii(self):
+        pankki_mock = Mock()
+        viitegeneraattori_mock = Mock()
+
+        # palautetaan aina arvo 42
+        viitegeneraattori_mock.uusi.return_value = 42
+
+        varasto_mock = Mock(wraps=Varasto())
+
+        # alustetaan kauppa
+        kauppa = Kauppa(varasto_mock, pankki_mock, viitegeneraattori_mock)
+
+        # tehdään ostokset
+        kauppa.aloita_asiointi()
+        kauppa.lisaa_koriin(1)
+        kauppa.poista_korista(1)
+
+        kauppa.tilimaksu("pekka", "12345")
+
+        # varmistetaan, että metodia tilisiirto on kutsuttu oikeilla argumenteilla
+        pankki_mock.tilisiirto.assert_called_with("pekka", ANY, "12345", ANY, 0)
+
+
