@@ -24,4 +24,5 @@ Start, Stop, Continue, More of sekä Less of.
 Osiota käydään läpi; mitä uutta ryhmä voisi tuoda toimintaansa, 
 mikä kannattaisi lopettaa koska se on este tai turhaa, 
 mitä halutaan jatkaa, 
-mitä tulisi tehdä enemmän ja mitä vähemmän?
+mitä tulisi tehdä enemmän ja mitä vähemmän? 
+Kommentit lisätään taululle sitä vastaavaan osioon.
