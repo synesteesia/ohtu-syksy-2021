@@ -1,0 +1,28 @@
+Glad, Sad, Mad:
+Retrospektiivitekniikka jonka kesto on korkeintaan 60min.
+Ideana keskustella menneestä sprintistä ryhmän jäsenten tekemien havaintojen pohjalta.
+Aluksi ryhmän jäsenet kirjoittavat korteille havaintoja kuluneesta sprintistä.
+Tämän jälkeen havaintojen kirjoittajat selittävät havaintonsa lyhyesti ilman muiden kommentointia,
+ja lisää sen taululle johon kortit listataan.
+
+Havainnot kategorisoidaan listaan kolmen otsikon alle.
+Glad edustaa havaintoja, jotka olivat positiivista sprintissä tiimin toiminnassa,
+Sad puolestaan edustaa negatiivista.
+Mad kategoriaan kuuluvat laajemmat huolenaiheet jotka eivät välttämättä liity suoraan sprinttiin tai tiimiin mutta vaikuttavat niiden toimintaan.
+Jos sama asia on ilmaistu monta kertaa ne voidaan yhdistää yhdeksi keskustelunaiheeksi.
+
+Seuraavaksi retrospektiiviin osallistujat antavat havainnoille sovitun määrän ääniä per ryhmän jäsen
+ja niiden mukaan käydään keskustelunaiheet läpi, yleisesti scrummasterin johdolla. 
+Ryhmän jäsenet voivat siis ilmaista mielipiteensä aiheesta, 
+mutta pitäen pääpainon siinä, miten aihetta tulisi käsitellä tulevan sprintin kannalta.
+
+Start, Stop, Continue, More of, Less of Wheel:
+Retrospektiivitekniikka jonka kesto on noin 10-25min riippuen ryhmän koosta ja varatusta ajasta.
+Ideana on kerätä ryhmältä palautetta jota voidaan käyttää toiminnan kehittämiseksi.
+Aluksi piirretään taululle ympyrä joka on jaettu viiteen osioon joissa on sanat 
+Start, Stop, Continue, More of sekä Less of.
+Osiota käydään läpi; mitä uutta ryhmä voisi tuoda toimintaansa, 
+mikä kannattaisi lopettaa koska se on este tai turhaa, 
+mitä halutaan jatkaa, 
+mitä tulisi tehdä enemmän ja mitä vähemmän? 
+Kommentit lisätään taululle sitä vastaavaan osioon.
