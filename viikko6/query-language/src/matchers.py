@@ -61,14 +61,7 @@ class Not:
 
 
 class All:
-    def __init__(self, condition):
-        self._condition = condition
-
-    def matches(self, *players):
-        for player in players:
-            if not self._condition.matches(player):
-                return False
-        
+    def matches(self, player):
         return True
 
 
