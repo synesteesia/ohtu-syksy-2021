@@ -29,7 +29,7 @@ def main():
                 "Peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s"
             )
 
-            haastava_yksinpeli = KPSFactory.pelaa_parempi_tekoaly
+            haastava_yksinpeli = KPSFactory.pelaa_parempi_tekoaly()
             haastava_yksinpeli.pelaa()
         else:
             break
